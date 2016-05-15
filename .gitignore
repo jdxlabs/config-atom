@@ -1,9 +1,9 @@
-
-.node-gyp
-.npm
-/nohup.out
+.node-gyp/
+.npm/
 build/
-compile-cache
-dev
+compile-cache/
+dev/
+storage/
+.DS_Store
+nohup.out
 projects.cson
-storage
