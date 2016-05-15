@@ -5,6 +5,7 @@
       "atom-dark-syntax"
     ]
   editor:
+    fontFamily: "DejaVu Sans Mono"
     fontSize: 12
     invisibles: {}
     preferredLineLength: 120
