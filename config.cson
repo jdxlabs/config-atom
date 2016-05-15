@@ -11,5 +11,6 @@
     preferredLineLength: 120
   "exception-reporting":
     userId: "ecd4e5f9-2825-9d2b-5585-48634411f938"
+  minimap: {}
   welcome:
     showOnStartup: false
