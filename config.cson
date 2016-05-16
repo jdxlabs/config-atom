@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "spell-check"
+    ]
     themes: [
       "one-dark-ui"
       "atom-dark-syntax"
