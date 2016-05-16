@@ -19,3 +19,17 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.source.php':
+  'Affiche un echo formatté':
+    'prefix': 'ecn'
+    'body': 'echo ${1:expression} . " <br>\\\\n";'
+  'Affiche un print_r formatté':
+    'prefix': 'ptr'
+    'body': 'echo \'<pre>\'; print_r(${1:expression}); echo \'<pre>\' . " <br>\\\\n";'
+  'Tracedebug':
+    'prefix': 'td'
+    'body': 'tracedebug(${1:expression}, \'${2:jdx}\', ${3:0});'
+'.source.js':
+  'Console info':
+    'prefix': 'ci'
+    'body': 'console.info(${1:expression});'
