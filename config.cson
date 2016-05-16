@@ -8,6 +8,9 @@
       "one-dark-ui"
       "atom-dark-syntax"
     ]
+  docblockr:
+    param_description: false
+    return_description: false
   editor:
     autoIndentOnPaste: false
     fontFamily: "DejaVu Sans Mono"
