@@ -1,5 +1,6 @@
 "*":
   core:
+    audioBeep: false
     disabledPackages: [
       "spell-check"
     ]
@@ -13,6 +14,7 @@
     invisibles: {}
     preferredLineLength: 120
     tabLength: 4
+    tabType: "soft"
   "exception-reporting":
     userId: "ecd4e5f9-2825-9d2b-5585-48634411f938"
   minimap: {}
