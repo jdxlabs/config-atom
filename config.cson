@@ -12,8 +12,11 @@
     autoIndentOnPaste: false
     fontFamily: "DejaVu Sans Mono"
     fontSize: 12
-    invisibles: {}
+    invisibles:
+      eol: false
+      space: false
     preferredLineLength: 120
+    showInvisibles: true
     tabLength: 4
     tabType: "soft"
   "exception-reporting":
