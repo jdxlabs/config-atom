@@ -9,6 +9,7 @@
       "atom-dark-syntax"
     ]
   editor:
+    autoIndentOnPaste: false
     fontFamily: "DejaVu Sans Mono"
     fontSize: 12
     invisibles: {}
