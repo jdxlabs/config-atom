@@ -1,8 +1,12 @@
 "*":
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+    cmdArgs: "--exclude=.git --exclude=vendor --exclude=*.js"
   core:
     audioBeep: false
     disabledPackages: [
       "spell-check"
+      "symbols-view"
     ]
     themes: [
       "one-dark-ui"
