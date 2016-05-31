@@ -1,7 +1,7 @@
 "*":
   "atom-ctags":
     autoBuildTagsWhenActive: true
-    cmdArgs: "--exclude=.git --exclude=vendor --exclude=*.js"
+    cmdArgs: "--exclude=.git --exclude=*.js"
   core:
     audioBeep: false
     disabledPackages: [
