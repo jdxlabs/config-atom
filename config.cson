@@ -8,6 +8,9 @@
       "spell-check"
       "symbols-view"
     ]
+    packagesWithKeymapsDisabled: [
+      "atom-ctags"
+    ]
     themes: [
       "one-dark-ui"
       "atom-dark-syntax"

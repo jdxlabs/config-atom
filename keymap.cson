@@ -28,3 +28,5 @@
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-alt-a': 'aligner:align'
+  'ctrl-shift-up': 'atom-ctags:return-from-declaration'
+  'ctrl-shift-down': 'atom-ctags:go-to-declaration'
