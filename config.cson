@@ -1,6 +1,6 @@
 "*":
   "atom-ctags":
-    cmdArgs: "--exclude=.git --exclude=*.js"
+    cmdArgs: "--exclude=.git --exclude=*.js --exclude=*.sql"
   core:
     audioBeep: false
     disabledPackages: [
