@@ -3,7 +3,6 @@
     audioBeep: false
     disabledPackages: [
       "spell-check"
-      "symbols-view"
     ]
     packagesWithKeymapsDisabled: [
       "atom-ctags"
