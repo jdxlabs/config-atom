@@ -6,6 +6,10 @@
     ]
   core:
     audioBeep: false
+    customFileTypes:
+      "text.plain": [
+        "md"
+      ]
     disabledPackages: [
       "spell-check"
     ]
@@ -40,3 +44,6 @@
   zentabs:
     maximumOpenedTabs: 10
     neverCloseUnsaved: true
+"text.plain":
+  whitespace:
+    removeTrailingWhitespace: true
