@@ -24,8 +24,8 @@
     fontFamily: "DejaVu Sans Mono"
     fontSize: 13
     invisibles:
-      eol: false
-      space: false
+      eol: ""
+      space: " "
     preferredLineLength: 120
     showInvisibles: true
     tabLength: 4
