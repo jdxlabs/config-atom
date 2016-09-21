@@ -84,6 +84,15 @@ function bob(){}`;
       parse(code, 3).name.should.equal('bob');
     });
 
+    it('should be able to parse function expressions in objects', () => {
+      const code = `const obj = {
+        foo(arg) {
+          return arg;
+        }
+      };`;
+      parse(code, 2).name.should.equal('foo');
+    });
+
     describe('location', () => {
       it('should be start of the function', () => {
         const code = '    function helloWorld() {}';
@@ -98,6 +107,16 @@ function bob(){}`;
       it('should be start of export keyword for exported default functions', () => {
         const code = '   export default function hello() {}';
         parse(code).location.column.should.equal(3);
+      });
+
+      it('should be start of async keyword for async functions', () => {
+        const code = '  async function hello() {}';
+        parse(code).location.column.should.equal(2);
+      });
+
+      it('should be start of export keyword for exported async functions', () => {
+        const code = '  export async function hello() {}';
+        parse(code).location.column.should.equal(2);
       });
 
       it('should be above the function location', () => {
@@ -162,6 +181,12 @@ function b() {}`;
         params.should.contain({ name: 'd', defaultValue: '[]', type: 'array' });
       });
 
+      it('should set the correct type for the default value - Array', () => {
+        const code = 'function helloWorld(d = null) {}';
+        const params = parse(code).params;
+        params.should.contain({ name: 'd', defaultValue: null, type: 'null' });
+      });
+
       it('should support rest parameters setting the type as array', () => {
         const code = 'function helloWorld(...stuff) {}';
         const params = parse(code).params;
@@ -183,6 +208,40 @@ function b() {}`;
         params.should.contain({
           name: 'b', parent: 'Unknown', defaultValue: 'hello', type: 'string',
         });
+      });
+    });
+
+    describe('classes', () => {
+      it('should set type to be class when on class definition', () => {
+        const code = `class Foo {
+          constructor() {}
+        }`;
+        parse(code, 1).type.should.equal('class');
+      });
+
+      it('should set extended property to be class that was extended', () => {
+        const code = `class Foo extends Bar {
+          constructor() {}
+        }`;
+        parse(code, 1).extends.should.equal('Bar');
+      });
+
+      it('should create a normal function defintion for class methods', () => {
+        const code = `class Foo extends Bar {
+          constructor() {}
+        }`;
+        parse(code, 2).name.should.equal('constructor');
+      });
+    });
+
+    describe('errors', () => {
+      it('should throw a reasonable error when there is invalid JavaScript', () => {
+        const code = 'afoahfa afohafo^^h$"a aflajfl';
+        try {
+          parse(code);
+        } catch (e) {
+          e.message.should.match(/atom-easy-jsdoc expects valid JavaScript. Error parsing: .*/);
+        }
       });
     });
   });
