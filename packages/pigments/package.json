@@ -1,7 +1,7 @@
 {
   "name": "pigments",
   "main": "./lib/pigments",
-  "version": "0.34.0",
+  "version": "0.35.1",
   "description": "A package to display colors in project and files.",
   "keywords": [
     "colors",
@@ -67,6 +67,7 @@
     "sourceNames": {
       "type": "array",
       "default": [
+        "**/*.css",
         "**/*.styl",
         "**/*.stylus",
         "**/*.less",
@@ -157,6 +158,11 @@
       "default": false,
       "description": "When enabled, the autocomplete provider will also provides color value."
     },
+    "autocompleteSuggestionsFromValue": {
+      "type": "boolean",
+      "default": false,
+      "description": "When enabled, the autocomplete provider will suggests color variables from hexadecimal values."
+    },
     "markerType": {
       "type": "string",
       "default": "background",
@@ -234,10 +240,10 @@
     "url": "https://github.com/abe33/atom-pigments/issues"
   },
   "homepage": "https://github.com/abe33/atom-pigments#readme",
-  "_id": "pigments@0.34.0",
-  "_shasum": "4ca0c65baf75692d86730d81f563f48cea67fe53",
-  "_resolved": "file:../d-116729-5574-63q215/package.tgz",
-  "_from": "../d-116729-5574-63q215/package.tgz",
+  "_id": "pigments@0.35.1",
+  "_shasum": "d6d2e1d58954fa8f693824f661085ddae405cc8c",
+  "_resolved": "file:../d-116826-25726-1e7154b/package.tgz",
+  "_from": "../d-116826-25726-1e7154b/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -373,7 +379,7 @@
       },
       {
         "name": "fs-plus",
-        "version": "2.9.1",
+        "version": "2.9.2",
         "path": "node_modules/fs-plus/lib/fs-plus.js"
       },
       {
@@ -390,6 +396,16 @@
         "name": "rimraf",
         "version": "2.2.8",
         "path": "node_modules/fs-plus/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "tildify",
+        "version": "1.2.0",
+        "path": "node_modules/fs-plus/node_modules/tildify/index.js"
+      },
+      {
+        "name": "os-homedir",
+        "version": "1.0.1",
+        "path": "node_modules/fs-plus/node_modules/tildify/node_modules/os-homedir/index.js"
       },
       {
         "name": "minimatch",
@@ -454,6 +470,8 @@
         "node_modules/fs-plus/node_modules/async/package.json",
         "node_modules/fs-plus/node_modules/mkdirp/package.json",
         "node_modules/fs-plus/node_modules/rimraf/package.json",
+        "node_modules/fs-plus/node_modules/tildify/node_modules/os-homedir/package.json",
+        "node_modules/fs-plus/node_modules/tildify/package.json",
         "node_modules/fs-plus/package.json",
         "node_modules/minimatch/node_modules/lru-cache/package.json",
         "node_modules/minimatch/node_modules/sigmund/package.json",
@@ -998,6 +1016,8 @@
         "node_modules/fs-plus/node_modules/mkdirp/index.js",
         "node_modules/fs-plus/node_modules/rimraf/bin.js",
         "node_modules/fs-plus/node_modules/rimraf/rimraf.js",
+        "node_modules/fs-plus/node_modules/tildify/index.js",
+        "node_modules/fs-plus/node_modules/tildify/node_modules/os-homedir/index.js",
         "node_modules/minimatch/minimatch.js",
         "node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
         "node_modules/minimatch/node_modules/sigmund/bench.js",
@@ -1366,10 +1386,19 @@
           "node_modules/fs-plus"
         ],
         "dependencies": {
-          "underscore-plus": "1.x",
+          "async": "~0.2.9",
           "mkdirp": "~0.3.5",
           "rimraf": "~2.2.2",
-          "async": "~0.2.9"
+          "tildify": "^1.2.0",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/node_modules/tildify"
+        ],
+        "dependencies": {
+          "os-homedir": "^1.0.0"
         }
       },
       {
