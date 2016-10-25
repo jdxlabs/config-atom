@@ -1,3 +1,32 @@
+<a name="v0.37.0"></a>
+# v0.37.0 (2016-10-04)
+
+## Features
+
+- Add setting to control reload notifications ([a869c819](https://github.com/abe33/atom-pigments/commit/a869c81906ff9f7ccfa945b9fbc1914856deb477), [#232](https://github.com/abe33/atom-pigments/issues/232))
+
+<a name="v0.36.0"></a>
+# v0.36.0 (2016-09-30)
+
+## Features
+
+- Implement a better reload command ([6fd1f4e3](https://github.com/abe33/atom-pigments/commit/6fd1f4e31b748c958e7708ff5687e2430691fc13))  <br>It will actually clear paths and variables to properly rescan the project
+- Change default marker type to `native-background`
+
+<a name="v0.35.3"></a>
+# v0.35.3 (2016-09-29)
+
+## Bug Fixes
+
+- Fix default colors not always available in context ([122725b0](https://github.com/abe33/atom-pigments/commit/122725b04ccf8f36bab528895246f16cd6a28446))
+
+<a name="v0.35.2"></a>
+# v0.35.2 (2016-09-28)
+
+## Bug Fixes
+
+- Fix autocomplete provider ([8d234c7d](https://github.com/abe33/atom-pigments/commit/8d234c7d618f0c5e8cefa6603c4953f8b0f7418d))
+
 <a name="v0.35.1"></a>
 # v0.35.1 (2016-09-24)
 
