@@ -36,6 +36,8 @@
   linter:
     errorPanelHeight: 24
   minimap: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
