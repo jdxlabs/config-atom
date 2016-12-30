@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
+        "raw": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
-        "spec": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
+        "rawSpec": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
+        "spec": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161129-25705-iia4gt"
+      "/tmp/apm-install-dir-1161130-6493-1uj1elj"
     ]
   ],
-  "_from": "../d-1161129-25705-v7q3f6/package.tgz",
-  "_id": "autocomplete-python@1.8.24",
+  "_from": "../d-1161130-6493-1oiv5px/package.tgz",
+  "_id": "autocomplete-python@1.8.25",
   "_inCache": true,
   "_installable": true,
   "_location": "/autocomplete-python",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
+    "raw": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
-    "spec": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
+    "rawSpec": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
+    "spec": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161129-25705-v7q3f6/package.tgz",
-  "_shasum": "7b3985627fc00a772e4c60c3d433ba387fa4a60d",
+  "_resolved": "file:../d-1161130-6493-1oiv5px/package.tgz",
+  "_shasum": "1b67ddc0d0600ddc1c1f8eebac56b066d03ab84d",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161129-25705-v7q3f6/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161129-25705-iia4gt",
+  "_spec": "/tmp/d-1161130-6493-1oiv5px/package.tgz",
+  "_where": "/tmp/apm-install-dir-1161130-6493-1uj1elj",
   "bugs": {
     "url": "https://github.com/autocomplete-python/autocomplete-python/issues"
   },
@@ -100,5 +100,5 @@
     "type": "git",
     "url": "git+https://github.com/autocomplete-python/autocomplete-python.git"
   },
-  "version": "1.8.24"
+  "version": "1.8.25"
 }
