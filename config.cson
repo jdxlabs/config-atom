@@ -41,7 +41,7 @@
   welcome:
     showOnStartup: false
   whitespace:
-    ensureSingleTrailingNewline: false
+    ensureSingleTrailingNewline: true
   zentabs:
     maximumOpenedTabs: 10
     neverCloseUnsaved: true
