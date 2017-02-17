@@ -22,6 +22,7 @@ const PARAM_PARSERS = {
 const SIMPLIFIERS = {
   'class': simplifyClassNode,
   'function': simplifyFuncNode,
+  'classMethod': simplifyClassMethodNode,
 };
 /* eslint-enable */
 
@@ -68,7 +69,7 @@ function getNode(ast, lineNum) {
   let exported = null;
 
   traverse(ast, {
-    FunctionDeclaration: (declaration) => {
+    'FunctionDeclaration|ArrowFunctionExpression': (declaration) => {
       if (node) { return; }
       const n = declaration.node;
       if (onLine(n, lineNum)) {
@@ -79,12 +80,21 @@ function getNode(ast, lineNum) {
         }
       }
     },
-    'ClassMethod|ObjectMethod': (declaration) => {
+    ObjectMethod: (declaration) => {
       if (node) { return; }
       const n = declaration.node;
       if (onLine(n, lineNum)) {
         node = n;
         node.jsDocType = 'function';
+        node.id = { name: node.key.name };
+      }
+    },
+    ClassMethod: (declaration) => {
+      if (node) { return; }
+      const n = declaration.node;
+      if (onLine(n, lineNum)) {
+        node = n;
+        node.jsDocType = 'classMethod';
         node.id = { name: node.key.name };
       }
     },
@@ -168,6 +178,9 @@ function parseAssignmentParam(param) {
   } else if (paramAssignmentType === 'NullLiteral') {
     type = 'null';
     defaultValue = null;
+  } else if (paramAssignmentType === 'CallExpression') {
+    type = 'Unknown';
+    defaultValue = 'Unknown';
   } else {
     throw new Error(`Unknown param type: ${paramAssignmentType}`);
   }
@@ -273,8 +286,11 @@ function simplifyNode(node) {
     throw new Error(`Unknown node type: ${jsDocType}`);
   }
 
+  const id = node.id || {};
+  const name = id.name || 'Unknown';
+
   return Object.assign({
-    name: node.id.name,
+    name,
     location: simplifyLocation(node.loc),
     type: jsDocType,
   }, simplifier(node));
@@ -290,6 +306,22 @@ function simplifyNode(node) {
 function simplifyFuncNode(node) {
   return {
     params: simplifyParams(node.params),
+    returns: { returns: false },
+  };
+}
+
+
+/**
+ * simplifyClassMethodNode - Extract classMethod specific JS Doc properties.
+ *
+ * @param  {object} node AST representation of the node.
+ *
+ * @return {type}      Simplified representation of the node.
+ */
+function simplifyClassMethodNode(node) {
+  return {
+    params: simplifyParams(node.params),
+    isStatic: node.static,
     returns: { returns: false },
   };
 }

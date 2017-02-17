@@ -93,6 +93,21 @@ function bob(){}`;
       parse(code, 2).name.should.equal('foo');
     });
 
+    it('should support anonymous functions', () => {
+      const code = `
+      export default function () {
+        return 'bar';
+      }`;
+      const { name } = parse(code);
+      name.should.equal('Unknown');
+    });
+
+    it('should support anonymous arrow functions', () => {
+      const code = 'export default () => {};';
+      const result = parse(code);
+      result.name.should.equal('Unknown');
+    });
+
     describe('location', () => {
       it('should be start of the function', () => {
         const code = '    function helloWorld() {}';
@@ -202,11 +217,14 @@ function b() {}`;
       });
 
       it('should support destructured parameters with default values', () => {
-        const code = "function helloWorld({ a = 1, b = 'hello' }) {}";
+        const code = "function helloWorld({ a = 1, b = 'hello', c = func() }) {}";
         const params = parse(code).params;
         params.should.contain({ name: 'a', parent: 'Unknown', defaultValue: 1, type: 'number' });
         params.should.contain({
           name: 'b', parent: 'Unknown', defaultValue: 'hello', type: 'string',
+        });
+        params.should.contain({
+          name: 'c', parent: 'Unknown', defaultValue: 'Unknown', type: 'Unknown',
         });
       });
     });
@@ -226,11 +244,20 @@ function b() {}`;
         parse(code, 1).extends.should.equal('Bar');
       });
 
-      it('should create a normal function defintion for class methods', () => {
+      it('should create an extended function definition for class methods', () => {
         const code = `class Foo extends Bar {
           constructor() {}
         }`;
         parse(code, 2).name.should.equal('constructor');
+        parse(code, 2).type.should.equal('classMethod');
+        parse(code, 2).isStatic.should.equal(false);
+      });
+
+      it('should set the `isStatic` property for static class methods', () => {
+        const code = `class Foo extends Bar {
+          static myStaticMethod() {}
+        }`;
+        parse(code, 2).isStatic.should.equal(true);
       });
 
       it('should not barf at class properties', () => {

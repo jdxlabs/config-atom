@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
+        "raw": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
-        "spec": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
+        "rawSpec": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
+        "spec": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-11711-17507-p7138i"
+      "/tmp/apm-install-dir-117117-31441-lhkwtz"
     ]
   ],
-  "_from": "../d-11711-17507-1xmeh0z/package.tgz",
-  "_id": "atom-easy-jsdoc@4.9.0",
+  "_from": "../d-117117-31441-1ss8ezx/package.tgz",
+  "_id": "atom-easy-jsdoc@4.10.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/atom-easy-jsdoc",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
+    "raw": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
-    "spec": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
+    "rawSpec": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
+    "spec": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11711-17507-1xmeh0z/package.tgz",
-  "_shasum": "479f29f7985569b6d13344ecab12f409c6c08a8e",
+  "_resolved": "file:../d-117117-31441-1ss8ezx/package.tgz",
+  "_shasum": "aeef9fa990afb14fe2ea8591318a7b8024e9bb97",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-11711-17507-1xmeh0z/package.tgz",
-  "_where": "/tmp/apm-install-dir-11711-17507-p7138i",
+  "_spec": "/tmp/d-117117-31441-1ss8ezx/package.tgz",
+  "_where": "/tmp/apm-install-dir-117117-31441-lhkwtz",
   "activationCommands": {
     "atom-workspace": [
       "jsdoc:block"
@@ -48,12 +48,12 @@
     "url": "https://github.com/tgandrews/atom-easy-jsdoc/issues"
   },
   "dependencies": {
+    "babel-cli": "^6.22.2",
     "babel-traverse": "^6.8.0",
     "babylon": "^6.8.0"
   },
   "description": "JSDoc style comments for javascript development",
   "devDependencies": {
-    "babel": "^6.5.2",
     "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.6.0",
     "babel-register": "^6.18.0",
@@ -82,5 +82,5 @@
     "test:lint": "eslint .",
     "test:unit": "mocha --compilers js:babel-register tests/unit/**/*.test.js"
   },
-  "version": "4.9.0"
+  "version": "4.10.0"
 }
