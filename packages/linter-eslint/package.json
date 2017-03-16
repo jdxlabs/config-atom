@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117117-31452-l4k60o/package.tgz",
+        "raw": "/tmp/d-117216-4091-1wlby85/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117117-31452-l4k60o/package.tgz",
-        "spec": "/tmp/d-117117-31452-l4k60o/package.tgz",
+        "rawSpec": "/tmp/d-117216-4091-1wlby85/package.tgz",
+        "spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117117-31452-1nbz3kj"
+      "/tmp/apm-install-dir-117216-4091-6udtzr"
     ]
   ],
-  "_from": "../d-117117-31452-l4k60o/package.tgz",
-  "_id": "linter-eslint@8.1.2",
+  "_from": "../d-117216-4091-1wlby85/package.tgz",
+  "_id": "linter-eslint@8.1.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117117-31452-l4k60o/package.tgz",
+    "raw": "/tmp/d-117216-4091-1wlby85/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117117-31452-l4k60o/package.tgz",
-    "spec": "/tmp/d-117117-31452-l4k60o/package.tgz",
+    "rawSpec": "/tmp/d-117216-4091-1wlby85/package.tgz",
+    "spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117117-31452-l4k60o/package.tgz",
-  "_shasum": "ab3e87ed5019d7af57d790e62f8f4a1c6e45b71f",
+  "_resolved": "file:../d-117216-4091-1wlby85/package.tgz",
+  "_shasum": "73fad8a3082ebbf00d3b076b8bef5dd69f11099c",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117117-31452-l4k60o/package.tgz",
-  "_where": "/tmp/apm-install-dir-117117-31452-1nbz3kj",
+  "_spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
+  "_where": "/tmp/apm-install-dir-117216-4091-6udtzr",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
@@ -151,7 +151,7 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-node5": "^12.0.0",
-    "eslint": "^3.12.0",
+    "eslint": "^3.17.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.2.0",
     "rimraf": "^2.5.4"
@@ -221,5 +221,5 @@
     "test": "apm test",
     "watch": "npm run compile -- -w"
   },
-  "version": "8.1.2"
+  "version": "8.1.4"
 }

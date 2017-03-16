@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
+        "raw": "/tmp/d-117216-4102-1js9n37/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
-        "spec": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
+        "rawSpec": "/tmp/d-117216-4102-1js9n37/package.tgz",
+        "spec": "/tmp/d-117216-4102-1js9n37/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117117-31463-qsi8sr"
+      "/tmp/apm-install-dir-117216-4102-1lxp9n"
     ]
   ],
-  "_from": "../d-117117-31463-1oa8xwu/package.tgz",
-  "_id": "Sublime-Style-Column-Selection@1.7.3",
+  "_from": "../d-117216-4102-1js9n37/package.tgz",
+  "_id": "Sublime-Style-Column-Selection@1.7.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/Sublime-Style-Column-Selection",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
+    "raw": "/tmp/d-117216-4102-1js9n37/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
-    "spec": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
+    "rawSpec": "/tmp/d-117216-4102-1js9n37/package.tgz",
+    "spec": "/tmp/d-117216-4102-1js9n37/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117117-31463-1oa8xwu/package.tgz",
-  "_shasum": "997988cd670aaf1daeac042c80ca8a7c487756c6",
+  "_resolved": "file:../d-117216-4102-1js9n37/package.tgz",
+  "_shasum": "8a7616726d6983b13b01187599d95db084988a21",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117117-31463-1oa8xwu/package.tgz",
-  "_where": "/tmp/apm-install-dir-117117-31463-qsi8sr",
+  "_spec": "/tmp/d-117216-4102-1js9n37/package.tgz",
+  "_where": "/tmp/apm-install-dir-117216-4102-1lxp9n",
   "bugs": {
     "url": "https://github.com/bigfive/atom-sublime-select/issues"
   },
@@ -56,5 +56,5 @@
     "type": "git",
     "url": "git+https://github.com/bigfive/atom-sublime-select.git"
   },
-  "version": "1.7.3"
+  "version": "1.7.4"
 }
