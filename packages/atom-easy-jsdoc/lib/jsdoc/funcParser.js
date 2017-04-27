@@ -106,7 +106,11 @@ function getNode(ast, lineNum) {
         const declaredNode = declarator.init;
         if (['FunctionExpression', 'ArrowFunctionExpression'].indexOf(declaredNode.type) > -1) {
           node = declaredNode;
-          node.loc = n.loc;
+          if (exported && exported.declaration === n) {
+            node.loc = exported.loc;
+          } else {
+            node.loc = n.loc;
+          }
           node.id = { name: declarator.id.name };
           node.jsDocType = 'function';
         }
@@ -172,7 +176,7 @@ function parseAssignmentParam(param) {
   } else if (paramAssignmentType === 'ArrayExpression') {
     type = 'array';
     defaultValue = '[]';
-  } else if (paramAssignmentType === 'ObjectExpression') {
+  } else if (['ObjectExpression', 'NewExpression'].indexOf(paramAssignmentType) >= 0) {
     type = 'object';
     defaultValue = '{}';
   } else if (paramAssignmentType === 'NullLiteral') {

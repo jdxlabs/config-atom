@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
+        "raw": "/tmp/d-117327-7278-vmblu5/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
-        "spec": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
+        "rawSpec": "/tmp/d-117327-7278-vmblu5/package.tgz",
+        "spec": "/tmp/d-117327-7278-vmblu5/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-116118-16210-356df5"
+      "/tmp/apm-install-dir-117327-7278-1w8lj5k"
     ]
   ],
-  "_from": "../d-116118-16210-1y2mvy0/package.tgz",
-  "_id": "docblockr@0.9.1",
+  "_from": "../d-117327-7278-vmblu5/package.tgz",
+  "_id": "docblockr@0.9.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/docblockr",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
+    "raw": "/tmp/d-117327-7278-vmblu5/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
-    "spec": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
+    "rawSpec": "/tmp/d-117327-7278-vmblu5/package.tgz",
+    "spec": "/tmp/d-117327-7278-vmblu5/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116118-16210-1y2mvy0/package.tgz",
-  "_shasum": "000e28a066d97d77b08cd9a1768fff4afb4ddde5",
+  "_resolved": "file:../d-117327-7278-vmblu5/package.tgz",
+  "_shasum": "a20a576e8dd6904d8484e1cb6ebb31e728c05693",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-116118-16210-1y2mvy0/package.tgz",
-  "_where": "/tmp/apm-install-dir-116118-16210-356df5",
+  "_spec": "/tmp/d-117327-7278-vmblu5/package.tgz",
+  "_where": "/tmp/apm-install-dir-117327-7278-1w8lj5k",
   "atomTestRunner": "./spec/runner",
   "bugs": {
     "url": "https://github.com/nikhilkalige/docblockr/issues"
@@ -71,5 +71,5 @@
   "scripts": {
     "test": "cd ~/.atom/packages; atom --test docblockr/spec"
   },
-  "version": "0.9.1"
+  "version": "0.9.4"
 }

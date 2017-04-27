@@ -33,8 +33,7 @@
     tabType: "soft"
   "exception-reporting":
     userId: "ecd4e5f9-2825-9d2b-5585-48634411f938"
-  linter:
-    errorPanelHeight: 24
+  linter: {}
   "linter-ui-default":
     showPanel: true
   minimap: {}

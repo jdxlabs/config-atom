@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117216-4091-1wlby85/package.tgz",
+        "raw": "/tmp/d-117327-7306-18n13nm/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117216-4091-1wlby85/package.tgz",
-        "spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
+        "rawSpec": "/tmp/d-117327-7306-18n13nm/package.tgz",
+        "spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117216-4091-6udtzr"
+      "/tmp/apm-install-dir-117327-7306-1y18vfp"
     ]
   ],
-  "_from": "../d-117216-4091-1wlby85/package.tgz",
-  "_id": "linter-eslint@8.1.4",
+  "_from": "../d-117327-7306-18n13nm/package.tgz",
+  "_id": "linter-eslint@8.1.7",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117216-4091-1wlby85/package.tgz",
+    "raw": "/tmp/d-117327-7306-18n13nm/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117216-4091-1wlby85/package.tgz",
-    "spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
+    "rawSpec": "/tmp/d-117327-7306-18n13nm/package.tgz",
+    "spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117216-4091-1wlby85/package.tgz",
-  "_shasum": "73fad8a3082ebbf00d3b076b8bef5dd69f11099c",
+  "_resolved": "file:../d-117327-7306-18n13nm/package.tgz",
+  "_shasum": "8903e4c1ea045298e24858f534fdd18ed35fb504",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117216-4091-1wlby85/package.tgz",
-  "_where": "/tmp/apm-install-dir-117216-4091-6udtzr",
+  "_spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
+  "_where": "/tmp/apm-install-dir-117327-7306-1y18vfp",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
@@ -137,8 +137,8 @@
     }
   },
   "dependencies": {
-    "atom-linter": "^9.0.0",
-    "atom-package-deps": "^4.0.1",
+    "atom-linter": "^10.0.0",
+    "atom-package-deps": "^4.6.0",
     "consistent-path": "^2.0.1",
     "escape-html": "^1.0.3",
     "eslint": "^3.6.0",
@@ -154,6 +154,7 @@
     "eslint": "^3.17.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "jasmine-fix": "^1.0.1",
     "rimraf": "^2.5.4"
   },
   "engines": {
@@ -190,7 +191,8 @@
       "atom": "true"
     },
     "env": {
-      "node": true
+      "node": true,
+      "browser": true
     }
   },
   "homepage": "https://github.com/AtomLinter/linter-eslint#readme",
@@ -221,5 +223,5 @@
     "test": "apm test",
     "watch": "npm run compile -- -w"
   },
-  "version": "8.1.4"
+  "version": "8.1.7"
 }

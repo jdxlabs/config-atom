@@ -114,8 +114,28 @@ function bob(){}`;
         parse(code).location.column.should.equal(4);
       });
 
+      it('should be start of the function', () => {
+        const code = '    const helloWorld = function () {}';
+        parse(code).location.column.should.equal(4);
+      });
+
+      it('should be start of the function', () => {
+        const code = '    const helloWorld = () => {}';
+        parse(code).location.column.should.equal(4);
+      });
+
       it('should be start of export keyword for exported functions', () => {
         const code = '  export function hello() {}';
+        parse(code).location.column.should.equal(2);
+      });
+
+      it('should be start of export keyword for exported arrow functions', () => {
+        const code = '  export const hello = () => {}';
+        parse(code).location.column.should.equal(2);
+      });
+
+      it('should be start of export keyword for exported arrow functions', () => {
+        const code = '  export const hello = function () {}';
         parse(code).location.column.should.equal(2);
       });
 
@@ -196,10 +216,22 @@ function b() {}`;
         params.should.contain({ name: 'd', defaultValue: '[]', type: 'array' });
       });
 
-      it('should set the correct type for the default value - Array', () => {
+      it('should set the correct type for the default value - null', () => {
         const code = 'function helloWorld(d = null) {}';
         const params = parse(code).params;
         params.should.contain({ name: 'd', defaultValue: null, type: 'null' });
+      });
+
+      it('should set the correct type for the default value - func()', () => {
+        const code = 'function helloWorld(d = func()) {}';
+        const params = parse(code).params;
+        params.should.contain({ name: 'd', defaultValue: 'Unknown', type: 'Unknown' });
+      });
+
+      it('should set the corret type for the default value - new Thing()', () => {
+        const code = 'function helloWorld(d = new Thing()) {}';
+        const params = parse(code).params;
+        params.should.contain({ name: 'd', defaultValue: '{}', type: 'object' });
       });
 
       it('should set type as unknown value when the default value is an identifier', () => {
