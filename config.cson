@@ -1,3 +1,6 @@
+".yaml.source":
+  editor:
+    tabLength: 2
 "*":
   "autocomplete-plus":
     fileBlacklist: [
