@@ -1,3 +1,18 @@
+## v1.2.1 (2017-05-26)
+- Fix aligning same character even when scope doesn't match
+
+## v1.2.0 (2017-05-18)
+- Fix not prompting to install depended packages
+
+## v1.1.0 (2017-05-17)
+- Use cursor scope instead of root scope for matching selector
+
+## v1.0.0 (2017-05-13)
+- Bump `extend` to v3.0.1
+- Update to use configSchema
+- Add aligner-javascript as dependency
+- Remove basic config.json
+
 ## v0.22.3 (2016-12-05)
 - Fix formatter not aligning the correct character (#65)
 

@@ -8,16 +8,10 @@ const operatorConfig = require('./operator-config');
 const helper = require('./helper');
 const providerManager = require('./provider-manager');
 const formatter = require('./formatter');
-const configs = require('../config');
-const extend = require('extend');
 const CompositeDisposable = require('atom').CompositeDisposable;
 
 class Aligner {
   constructor() {}
-
-  get config() {
-    return operatorConfig.getAtomConfig();
-  }
 
   /**
    * @param {Editor} editor
@@ -67,19 +61,15 @@ class Aligner {
   }
 
   activate() {
-    this.disposables = new CompositeDisposable();
+    if (!atom.inSpecMode()) {
+      require('atom-package-deps').install('aligner', true);
+    }
 
-    this.disposables.add(atom.config.observe('aligner', (value) => {
-      operatorConfig.updateConfigWithAtom('aligner', value);
-    }));
+    this.disposables = new CompositeDisposable();
 
     this.disposables.add(atom.commands.add('atom-text-editor', 'aligner:align', () => {
       this.align(atom.workspace.getActiveTextEditor());
     }));
-
-    let alignerConfig = extend(true, {}, configs);
-    extend(true, alignerConfig.config, atom.config.get('aligner'));
-    this.disposables.add(operatorConfig.add('aligner', alignerConfig));
   }
 
   deactivate() {

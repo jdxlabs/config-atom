@@ -45,15 +45,13 @@ function _sanitizeTokenValue (token) {
  */
 function getAlignCharacter (editor, row, character, characterConfig) {
   let tokenized = getTokenizedLineForBufferRow(editor, row);
-  let languageScope = editor.getRootScopeDescriptor().getScopeChain() || 'base';
-
   if (!tokenized) return null;
 
   for (let i = 0; i < tokenized.tokens.length; i++) {
     let token = tokenized.tokens[i];
     let tokenValue = _sanitizeTokenValue(token.value);
 
-    let config = operatorConfig.getConfig(tokenValue, languageScope);
+    let config = operatorConfig.getConfig(tokenValue, editor);
     if (!config) {
       continue;
     }
@@ -94,13 +92,12 @@ function getAlignCharacterInRanges (editor, ranges) {
  * @returns {{offsets:<Array>, sectionizedLines:<Array>}}
  */
 function getOffsetsAndSectionizedLines (editor, character, ranges) {
-  let scope = editor.getRootScopeDescriptor().getScopeChain();
   let offsets = [];
   let sectionizedLines = [];
 
   _traverseRanges(ranges, (line, rangeIndex) => {
     let tokenized       = getTokenizedLineForBufferRow(editor, line);
-    let config          = operatorConfig.getConfig(character, scope);
+    let config          = operatorConfig.getConfig(character, editor);
     let sectionizedLine = parseTokenizedLine(tokenized, character, config);
 
     if (!sectionizedLines[rangeIndex]) {
@@ -157,8 +154,9 @@ function parseTokenizedLine (tokenizedLine, character, config) {
     if (index == trailingCommentIndex) break
 
     let tokenValue = _formatTokenValue(token, tokenizedLine.invisibles);
+    let doesScopeMatch = token.scopes.some((scope) => !!scope.match(config.scope))
 
-    if (operatorConfig.canAlignWith(character, _sanitizeTokenValue(tokenValue), config) && (!afterCharacter || config.multiple)) {
+    if (doesScopeMatch && operatorConfig.canAlignWith(character, _sanitizeTokenValue(tokenValue), config) && (!afterCharacter || config.multiple)) {
       sectionizedLine.prefix = operatorConfig.isPrefixed(_sanitizeTokenValue(tokenValue), config);
 
       if (config.multiple) {
@@ -208,8 +206,7 @@ function getSameIndentationRange (editor, row, character) {
 
   let sectionizedLines = {};
   let tokenized        = getTokenizedLineForBufferRow(editor, row);
-  let scope            = editor.getRootScopeDescriptor().getScopeChain();
-  let config           = operatorConfig.getConfig(character, scope);
+  let config           = operatorConfig.getConfig(character, editor);
 
   let sectionizedLine = parseTokenizedLine(tokenized, character, config);
 

@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117127-32141-sr4iy7/package.tgz",
+        "raw": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117127-32141-sr4iy7/package.tgz",
-        "spec": "/tmp/d-117127-32141-sr4iy7/package.tgz",
+        "rawSpec": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
+        "spec": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117127-32141-1mooxkg"
+      "/tmp/apm-install-dir-117429-16234-1t0y8l9.mf2q4ims4i"
     ]
   ],
-  "_from": "../d-117127-32141-sr4iy7/package.tgz",
-  "_id": "copy-path@0.4.1",
+  "_from": "../d-117429-16234-mcgb0b.w04wws714i/package.tgz",
+  "_id": "copy-path@0.4.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/copy-path",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117127-32141-sr4iy7/package.tgz",
+    "raw": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117127-32141-sr4iy7/package.tgz",
-    "spec": "/tmp/d-117127-32141-sr4iy7/package.tgz",
+    "rawSpec": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
+    "spec": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117127-32141-sr4iy7/package.tgz",
-  "_shasum": "5241680e2d5f262cd8eec94661cc801a3140e4a3",
+  "_resolved": "file:../d-117429-16234-mcgb0b.w04wws714i/package.tgz",
+  "_shasum": "a3bb31a4cd6de684ba2412c8f03f4a09d430c90a",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117127-32141-sr4iy7/package.tgz",
-  "_where": "/tmp/apm-install-dir-117127-32141-1mooxkg",
+  "_spec": "/tmp/d-117429-16234-mcgb0b.w04wws714i/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-16234-1t0y8l9.mf2q4ims4i",
   "author": {
     "name": "Shintaro Seki"
   },
@@ -62,5 +62,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.4.1"
+  "version": "0.4.2"
 }

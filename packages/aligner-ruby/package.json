@@ -1,17 +1,61 @@
 {
-  "name": "aligner-ruby",
-  "main": "./lib/main",
-  "version": "1.5.0",
-  "description": "Ruby support for aligner",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adrianlee44/atom-aligner-ruby.git"
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+        "spec": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117429-16187-r96rj3.b7n8f47vi"
+    ]
+  ],
+  "_from": "../d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+  "_id": "aligner-ruby@1.6.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/aligner-ruby",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+    "spec": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+    "type": "local"
   },
-  "license": "MIT",
-  "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+  "_shasum": "f4d8494743f245aa57d63d642788dd99d4ac75f7",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117429-16187-mawxka.gl9zggmn29/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-16187-r96rj3.b7n8f47vi",
+  "bugs": {
+    "url": "https://github.com/adrianlee44/atom-aligner-ruby/issues"
   },
   "dependencies": {},
+  "description": "Ruby support for aligner",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.9.0"
+  },
+  "homepage": "https://github.com/adrianlee44/atom-aligner-ruby#readme",
+  "keywords": [
+    "aligner",
+    "alignment",
+    "align",
+    "ruby"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "aligner-ruby",
+  "optionalDependencies": {},
   "providedServices": {
     "aligner.provider": {
       "versions": {
@@ -19,28 +63,11 @@
       }
     }
   },
-  "readme": "# aligner-ruby\n\n[Aligner](https://github.com/adrianlee44/atom-aligner) add-on to support Ruby and Ruby on Rails.\n\n## Installation\nAligner must be installed along with this package. For more information, please check out [Aligner](https://github.com/adrianlee44/atom-aligner)\n\n## Changelog\n- 2016-08-01   v1.5.0   Add prefix support to `=` operator\n- 2015-05-09   v1.4.0   Add Rspec support\n- 2015-04-24   v1.3.0   Add `=` support (#2)\n- 2015-04-09   v1.2.1   Reverted Atom requirement back to v0.174.0\n- 2015-04-07   v1.2.0   Add `:` support for 1.9 syntax\n- 2015-04-07   v1.1.0   Add Ruby on Rails support\n- 2015-03-23   v1.0.0   Initial release\n",
+  "readme": "# aligner-ruby\n\n[Aligner](https://github.com/adrianlee44/atom-aligner) add-on to support Ruby and Ruby on Rails.\n\n## Installation\nAligner must be installed along with this package. For more information, please check out [Aligner](https://github.com/adrianlee44/atom-aligner)\n\n## Changelog\n- 2017-05-26   v1.6.1   Fix typo in title for = config\n- 2017-05-18   v1.6.0   Add support for `eq` in Rspec\n- 2016-08-01   v1.5.0   Add prefix support to `=` operator\n- 2015-05-09   v1.4.0   Add Rspec support\n- 2015-04-24   v1.3.0   Add `=` support (#2)\n- 2015-04-09   v1.2.1   Reverted Atom requirement back to v0.174.0\n- 2015-04-07   v1.2.0   Add `:` support for 1.9 syntax\n- 2015-04-07   v1.1.0   Add Ruby on Rails support\n- 2015-03-23   v1.0.0   Initial release\n",
   "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/adrianlee44/atom-aligner-ruby/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianlee44/atom-aligner-ruby.git"
   },
-  "homepage": "https://github.com/adrianlee44/atom-aligner-ruby#readme",
-  "_id": "aligner-ruby@1.5.0",
-  "_shasum": "eeeba1dc2deda20882534aa4920ec584f1d89bb4",
-  "_resolved": "file:../d-11679-6126-cbdmdo/package.tgz",
-  "_from": "../d-11679-6126-cbdmdo/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".coffee": [
-        "lib/main.coffee",
-        "lib/provider.coffee"
-      ],
-      ".json": [
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "version": "1.6.1"
 }

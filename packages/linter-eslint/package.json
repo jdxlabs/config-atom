@@ -2,40 +2,58 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117327-7306-18n13nm/package.tgz",
+        "raw": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117327-7306-18n13nm/package.tgz",
-        "spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
+        "rawSpec": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
+        "spec": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117327-7306-1y18vfp"
+      "/tmp/apm-install-dir-117429-16236-1atphn3.tnbtqsq0k9"
     ]
   ],
-  "_from": "../d-117327-7306-18n13nm/package.tgz",
-  "_id": "linter-eslint@8.1.7",
+  "_from": "../d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
+  "_id": "linter-eslint@8.2.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-eslint",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117327-7306-18n13nm/package.tgz",
+    "raw": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117327-7306-18n13nm/package.tgz",
-    "spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
+    "rawSpec": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
+    "spec": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117327-7306-18n13nm/package.tgz",
-  "_shasum": "8903e4c1ea045298e24858f534fdd18ed35fb504",
+  "_resolved": "file:../d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
+  "_shasum": "1d75e167bb65a79d6958d044f967c3bc61ef5a03",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117327-7306-18n13nm/package.tgz",
-  "_where": "/tmp/apm-install-dir-117327-7306-1y18vfp",
+  "_spec": "/tmp/d-117429-16236-2x1ub0.54is4cayvi/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-16236-1atphn3.tnbtqsq0k9",
+  "atomTranspilers": [
+    {
+      "glob": "{src,spec}/*.js",
+      "transpiler": "atom-babel6-transpiler",
+      "options": {
+        "babel": {
+          "presets": [
+            "node5"
+          ],
+          "sourceMaps": "inline",
+          "babelrc": false
+        },
+        "cacheKeyFiles": [
+          "package.json"
+        ]
+      }
+    }
+  ],
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-eslint/issues"
   },
@@ -137,20 +155,19 @@
     }
   },
   "dependencies": {
+    "atom-babel6-transpiler": "^1.1.1",
     "atom-linter": "^10.0.0",
     "atom-package-deps": "^4.6.0",
+    "babel-preset-node5": "^12.0.0",
     "consistent-path": "^2.0.1",
-    "escape-html": "^1.0.3",
+    "crypto-random-string": "^1.0.0",
     "eslint": "^3.6.0",
     "eslint-rule-documentation": "^1.0.0",
-    "process-communication": "^1.1.0",
     "resolve-env": "^1.0.0",
     "user-home": "^2.0.0"
   },
   "description": "Lint JavaScript on the fly, using ESLint",
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-node5": "^12.0.0",
     "eslint": "^3.17.0",
     "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.2.0",
@@ -158,7 +175,7 @@
     "rimraf": "^2.5.4"
   },
   "engines": {
-    "atom": ">=1.10.0 <2.0.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "eslintConfig": {
     "rules": {
@@ -197,16 +214,16 @@
   },
   "homepage": "https://github.com/AtomLinter/linter-eslint#readme",
   "license": "MIT",
-  "main": "./lib/main.js",
+  "main": "./src/main.js",
   "name": "linter-eslint",
   "optionalDependencies": {},
   "package-deps": [
-    "linter"
+    "linter:2.0.0"
   ],
   "providedServices": {
     "linter": {
       "versions": {
-        "1.0.0": "provideLinter"
+        "2.0.0": "provideLinter"
       }
     }
   },
@@ -217,11 +234,8 @@
     "url": "git+https://github.com/AtomLinter/linter-eslint.git"
   },
   "scripts": {
-    "clean": "rimraf lib",
-    "compile": "npm run clean && babel src --out-dir lib",
     "lint": "eslint .",
-    "test": "apm test",
-    "watch": "npm run compile -- -w"
+    "test": "apm test"
   },
-  "version": "8.1.7"
+  "version": "8.2.1"
 }

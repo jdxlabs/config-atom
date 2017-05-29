@@ -3,7 +3,6 @@
 const helper = require('../lib/helper');
 const operatorConfig = require('../lib/operator-config');
 const path = require('path');
-const configs = require('../config');
 const Range = require('atom').Range;
 
 describe("Helper", () => {
@@ -21,6 +20,10 @@ describe("Helper", () => {
     });
 
     waitsForPromise(() => {
+      return atom.packages.activatePackage('aligner-coffeescript');
+    });
+
+    waitsForPromise(() => {
       return atom.workspace.open('helper-sample.coffee')
       .then((o) => {
         editor = o;
@@ -28,7 +31,7 @@ describe("Helper", () => {
     });
 
     runs(() => {
-      config = operatorConfig.getConfig('=');
+      config = operatorConfig.getConfig('=', editor);
     });
   });
 
@@ -163,16 +166,14 @@ describe("Helper", () => {
     });
 
     it("should get the = character", () => {
-      let languageScope = editor.getRootScopeDescriptor().getScopeChain() || 'base';
-      let config = operatorConfig.getConfig("+=", languageScope);
+      let config = operatorConfig.getConfig("+=", editor);
 
       const character = helper.getAlignCharacter(editor, 1, "+=", config);
       expect(character).toBe("=");
     });
 
     it("should not get the = character", () => {
-      let languageScope = editor.getRootScopeDescriptor().getScopeChain() || 'base';
-      let config = operatorConfig.getConfig(":", languageScope);
+      let config = operatorConfig.getConfig(":", editor);
 
       const character = helper.getAlignCharacter(editor, 1, ":", config);
       expect(character).not.toBeDefined();
@@ -238,6 +239,39 @@ describe("Helper", () => {
         expect(output.isValid()).toBe(true);
       });
     });
+
+    describe("not parse a line with the same character but not match scope", () => {
+      let output;
+
+      beforeEach(() => {
+        let scssEditor;
+
+        waitsForPromise(() => {
+          return atom.packages.activatePackage('aligner-scss');
+        });
+
+        waitsForPromise(() => {
+          return atom.workspace.open('test.scss')
+          .then((o) => {
+            scssEditor = o;
+          });
+        });
+
+        runs(() => {
+          const line = scssEditor.tokenizedBuffer.tokenizedLineForRow(3);
+          output = helper.parseTokenizedLine(line, ':', {
+            alignment: 'right',
+            leftSpace: false,
+            rightSpace: true,
+            scope: 'key-value|property-name|operator'
+          });
+        });
+      });
+
+      it('should show the line is invalid', () => {
+        expect(output.isValid()).toBe(false);
+      });
+    })
 
     describe("parsing a full line comment", () => {
       let output;

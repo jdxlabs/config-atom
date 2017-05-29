@@ -1,17 +1,61 @@
 {
-  "name": "aligner-css",
-  "main": "./lib/main",
-  "version": "1.2.0",
-  "description": "CSS support for aligner",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adrianlee44/atom-aligner-css.git"
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+        "spec": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-117429-16150-u042sg.6ga1xg8pvi"
+    ]
+  ],
+  "_from": "../d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+  "_id": "aligner-css@1.2.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/aligner-css",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+    "spec": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+    "type": "local"
   },
-  "license": "MIT",
-  "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+  "_shasum": "c05a306f68c6016a07effde5924329895a892bbc",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-117429-16150-i4an9r.lad7f4j9k9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-16150-u042sg.6ga1xg8pvi",
+  "bugs": {
+    "url": "https://github.com/adrianlee44/atom-aligner-css/issues"
   },
   "dependencies": {},
+  "description": "CSS support for aligner",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.9.0"
+  },
+  "homepage": "https://github.com/adrianlee44/atom-aligner-css#readme",
+  "keywords": [
+    "aligner",
+    "alignment",
+    "align",
+    "css"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "aligner-css",
+  "optionalDependencies": {},
   "providedServices": {
     "aligner.provider": {
       "versions": {
@@ -19,28 +63,11 @@
       }
     }
   },
-  "readme": "# aligner-css\n\n[Aligner](https://github.com/adrianlee44/atom-aligner) add-on to support CSS and LESS.\n\n## Installation\nAligner must be installed along with this package. For more information, please check out [Aligner](https://github.com/adrianlee44/atom-aligner)\n\n## Changelog\n- 2015-03-26   v1.2.0   Added LESS and moved SASS/SCSS to [aligner-scss](https://github.com/adrianlee44/atom-aligner-scss)\n- 2015-03-22   v1.1.0   Added support for SASS and SCSS\n- 2015-03-22   v1.0.0   Initial release\n",
+  "readme": "# aligner-css\n\n[Aligner](https://github.com/adrianlee44/atom-aligner) add-on to support CSS and LESS.\n\n## Supported operators\n`:`\n```css\nbody {\n  display:   none;\n  position:  absolute;\n  font-size: 20px;\n}\n```\n\n## Installation\nAligner must be installed along with this package. For more information, please check out [Aligner](https://github.com/adrianlee44/atom-aligner)\n\n## Changelog\n- 2017-05-13   v1.2.1   Update documentation\n- 2015-03-26   v1.2.0   Added LESS and moved SASS/SCSS to [aligner-scss](https://github.com/adrianlee44/atom-aligner-scss)\n- 2015-03-22   v1.1.0   Added support for SASS and SCSS\n- 2015-03-22   v1.0.0   Initial release\n",
   "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/adrianlee44/atom-aligner-css/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianlee44/atom-aligner-css.git"
   },
-  "homepage": "https://github.com/adrianlee44/atom-aligner-css#readme",
-  "_id": "aligner-css@1.2.0",
-  "_shasum": "c6792ad8c8fd6fb67c6addc6f223137e68b06a03",
-  "_resolved": "file:../d-116416-13257-oqwnce/package.tgz",
-  "_from": "../d-116416-13257-oqwnce/package.tgz",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [],
-    "extensions": {
-      ".coffee": [
-        "lib/main.coffee",
-        "lib/provider.coffee"
-      ],
-      ".json": [
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "version": "1.2.1"
 }

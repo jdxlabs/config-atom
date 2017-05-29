@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117327-7307-1fkpbug/package.tgz",
+        "raw": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117327-7307-1fkpbug/package.tgz",
-        "spec": "/tmp/d-117327-7307-1fkpbug/package.tgz",
+        "rawSpec": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
+        "spec": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117327-7307-1bggqc8"
+      "/tmp/apm-install-dir-117429-16242-pn1z61.uqxh8bbj4i"
     ]
   ],
-  "_from": "../d-117327-7307-1fkpbug/package.tgz",
-  "_id": "linter-ui-default@1.2.3",
+  "_from": "../d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
+  "_id": "linter-ui-default@1.2.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117327-7307-1fkpbug/package.tgz",
+    "raw": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117327-7307-1fkpbug/package.tgz",
-    "spec": "/tmp/d-117327-7307-1fkpbug/package.tgz",
+    "rawSpec": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
+    "spec": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117327-7307-1fkpbug/package.tgz",
-  "_shasum": "92a6c92019a02ff06eda364918ae9aaa57ae30eb",
+  "_resolved": "file:../d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
+  "_shasum": "cd6cbb9e21c33c92c7d351ba7db3f67bc8c750a8",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117327-7307-1fkpbug/package.tgz",
-  "_where": "/tmp/apm-install-dir-117327-7307-1bggqc8",
+  "_spec": "/tmp/d-117429-16242-1l0hrz5.pamvwh4cxr/package.tgz",
+  "_where": "/tmp/apm-install-dir-117429-16242-pn1z61.uqxh8bbj4i",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -188,7 +188,7 @@
   "description": "Default UI for the Linter package",
   "devDependencies": {
     "eslint-config-steelbrain": "^3.0.0",
-    "flow-bin": "^0.43.0",
+    "flow-bin": "^0.45.0",
     "jasmine-fix": "^1.0.1",
     "rimraf": "^2.5.4"
   },
@@ -229,5 +229,5 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.2.3"
+  "version": "1.2.4"
 }

@@ -4,7 +4,6 @@
 
 'use strict';
 
-const configs = require('../config');
 const extend = require('extend');
 const Disposable = require('atom').Disposable;
 
@@ -137,16 +136,8 @@ class OperatorConfig {
    * @param {Object} newConfig Config object in Atom format
    */
   updateConfigWithAtom(packageId, newConfig) {
-    packageId = packageId || 'aligner';
+    if (!packageId) return;
     this.updateSetting(packageId, this.convertAtomConfig(newConfig));
-  }
-
-  /**
-   * Get config object for Atom used in package setting
-   * @return {Object}
-   */
-  getAtomConfig() {
-    return configs.config;
   }
 
   /**
@@ -154,22 +145,26 @@ class OperatorConfig {
    * @param {String} languageScope
    * @return {object}
    */
-  getConfig(character, languageScope) {
-    languageScope = languageScope || 'base';
+  getConfig(character, editor) {
+    let languageScope = editor.getCursorScope().getScopeChain();
 
     for (let id in this.settings) {
       let config = this.settings[id];
 
-      if (config.selector &&
-          config.selector.indexOf(languageScope) != -1 &&
+      if (languageScope &&
+          config.selector &&
+          this._isSelectorInScope(config.selector, languageScope) &&
           config[character] &&
           config[character].enabled) {
         return config[character];
       }
     }
+  }
 
-    // default settings for character
-    return this.settings.aligner[character];
+  _isSelectorInScope(selectors, languageScope) {
+    return selectors.some((selector) => {
+      return languageScope.indexOf(selector) != -1;
+    });
   }
 
   /**

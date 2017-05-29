@@ -1,5 +1,6 @@
 'use strict'
 
+const os = require('os')
 const element = require('./decorators/element')
 const include = require('./decorators/include')
 const {EventsDelegation} = require('atom-utils')
@@ -44,13 +45,29 @@ class KiteWrapper {
 
   static isLegible (textEditor) {
     const path = textEditor.getPath()
-    return path && /\.py$/.test(path) && !atom.packages.getLoadedPackage('kite')
+    return path && /\.py$/.test(path) && os.platform() !== 'linux' && !atom.packages.getLoadedPackage('kite')
   }
 
   static handle (textEditor, minimapElement) {
     let wrapper = new this()
     wrapper.textEditor = textEditor
+    wrapper.minimap = minimapElement.getModel()
+    wrapper.minimapElement = minimapElement
     wrapper.wrap(minimapElement)
+  }
+
+  destroy () {
+    this.subscriptions.dispose()
+    this.observer.disconnect()
+    delete this.minimap
+    delete this.minimapElement
+    delete this.textEditor
+    this.remove()
+  }
+
+  unwrap () {
+    this.parentNode.insertBefore(this.minimapElement, this)
+    this.destroy()
   }
 
   wrap (minimapElement) {
@@ -67,8 +84,7 @@ class KiteWrapper {
 
     this.observer.observe(minimapElement, {attributes: true})
 
-    const minimap = minimapElement.getModel()
-    minimap.getScreenHeight = function () {
+    this.minimap.getScreenHeight = function () {
       if (this.isStandAlone()) {
         if (this.height != null) {
           return this.height
@@ -84,9 +100,9 @@ class KiteWrapper {
   }
 
   update () {
-    const matches = []
-    this.textEditor.scan(/(import|from)\s+(\w+)/g, (m) => {
-      matches.push(m.match[2])
+    let matches = []
+    this.textEditor.scan(/(import|from)\s+(([\w]+(,\s)*)+)/g, (m) => {
+      matches = matches.concat(m.match[2].split(/,\s/g))
     })
     const links = modules.filter(m => matches.includes(m)).slice(0, 5).map(this.link)
 
@@ -95,13 +111,14 @@ class KiteWrapper {
 
   snippet (content) {
     return `
+      <i class="icon icon-remove-close"></i>
       <span class="collapser">docs <i class="icon icon-chevron-down"></i></span>
       <ul>${content}</ul>
     `
   }
 
   link (mod) {
-    return `<li><a href="https://alpha.kite.com/docs/python/${mod}?source=minimap">${mod}</a></li>`
+    return `<li><a href="https://kite.com/docs/python/${mod}?source=minimap">${mod}</a></li>`
   }
 
   attachedCallback () {
@@ -111,16 +128,25 @@ class KiteWrapper {
       this.update()
     }))
 
+    this.subscriptions.add(this.minimap.onDidDestroy(() => {
+      this.destroy()
+    }))
+
+    this.subscriptions.add(atom.config.observe('minimap.disablePythonDocLinks', (v) => {
+      if (v) { this.unwrap() }
+    }))
+
     this.subscriptions.add(this.subscribeTo(this, '.collapser', {
       'click': () => {
         this.querySelector('.collapser').classList.toggle('collapse')
       }
     }))
-  }
 
-  detachedCallback () {
-    this.subscriptions.dispose()
-    this.observer.disconnect()
+    this.subscriptions.add(this.subscribeTo(this, '.icon-remove-close', {
+      'click': () => {
+        atom.config.set('minimap.disablePythonDocLinks', true)
+      }
+    }))
   }
 }
 
