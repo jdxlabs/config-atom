@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
+        "raw": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
-        "spec": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
+        "rawSpec": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
+        "spec": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117519-2693-cnz4rb.ucxkrqw7b9"
+      "/tmp/apm-install-dir-117526-5502-19d8ufw.gjte4dvx6r"
     ]
   ],
-  "_from": "../d-117519-2693-10ptgen.an9immfgvi/package.tgz",
-  "_id": "aligner@1.2.2",
+  "_from": "../d-117526-5502-h2y9gx.63ruul3di/package.tgz",
+  "_id": "aligner@1.2.3",
   "_inCache": true,
-  "_installable": true,
   "_location": "/aligner",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
+    "raw": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
-    "spec": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
+    "rawSpec": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
+    "spec": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117519-2693-10ptgen.an9immfgvi/package.tgz",
-  "_shasum": "6c78cca0f513072c9ebe469ef01e45c4474c46fb",
+  "_resolved": "file:../d-117526-5502-h2y9gx.63ruul3di/package.tgz",
+  "_shasum": "f5c63a9e0178282f7775fbb7a86e778c62bec1d9",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117519-2693-10ptgen.an9immfgvi/package.tgz",
-  "_where": "/tmp/apm-install-dir-117519-2693-cnz4rb.ucxkrqw7b9",
+  "_spec": "/tmp/d-117526-5502-h2y9gx.63ruul3di/package.tgz",
+  "_where": "/tmp/apm-install-dir-117526-5502-19d8ufw.gjte4dvx6r",
   "bugs": {
     "url": "https://github.com/adrianlee44/atom-aligner/issues"
   },
@@ -86,7 +85,7 @@
     "type": "git",
     "url": "git+https://github.com/adrianlee44/atom-aligner.git"
   },
-  "version": "1.2.2",
+  "version": "1.2.3",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [

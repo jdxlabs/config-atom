@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
+        "raw": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
-        "spec": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
+        "rawSpec": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
+        "spec": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117429-16219-1ruo7tf.xbb1uzyqfr"
+      "/tmp/apm-install-dir-117526-5517-bf99bq.d48n34bo6r"
     ]
   ],
-  "_from": "../d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
-  "_id": "docblockr@0.10.3",
+  "_from": "../d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
+  "_id": "docblockr@0.10.5",
   "_inCache": true,
-  "_installable": true,
   "_location": "/docblockr",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
+    "raw": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
-    "spec": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
+    "rawSpec": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
+    "spec": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
-  "_shasum": "3b8de97069169c5e896fd0e14583cfc130e1c436",
+  "_resolved": "file:../d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
+  "_shasum": "93ae89aeeed30d704d82d5e51b08fcbd9f55cdfa",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117429-16219-bpoykm.vagcyxpqfr/package.tgz",
-  "_where": "/tmp/apm-install-dir-117429-16219-1ruo7tf.xbb1uzyqfr",
+  "_spec": "/tmp/d-117526-5517-hw5qkg.jjh3hm2t9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117526-5517-bf99bq.d48n34bo6r",
   "atomTestRunner": "./spec/runner",
   "bugs": {
     "url": "https://github.com/nikhilkalige/docblockr/issues"
@@ -71,5 +70,31 @@
   "scripts": {
     "test": "cd ~/.atom/packages; atom --test docblockr/spec"
   },
-  "version": "0.10.3"
+  "version": "0.10.5",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".js": [
+        "lib/docblockr-worker.js",
+        "lib/docblockr.js",
+        "lib/docsparser.js",
+        "lib/languages/actionscript.js",
+        "lib/languages/coffee.js",
+        "lib/languages/cpp.js",
+        "lib/languages/java.js",
+        "lib/languages/javascript.js",
+        "lib/languages/objc.js",
+        "lib/languages/php.js",
+        "lib/languages/rust.js",
+        "lib/languages/typescript.js",
+        "lib/utils.js",
+        "lib/xregexp.js"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
