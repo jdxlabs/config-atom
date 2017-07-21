@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
+        "raw": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
-        "spec": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
+        "rawSpec": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
+        "spec": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117526-5530-fg78rp.hlb9qc9pb9"
+      "/tmp/apm-install-dir-117621-28466-1fq7rbj.vdt12it3xr"
     ]
   ],
-  "_from": "../d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
-  "_id": "linter-ui-default@1.6.2",
+  "_from": "../d-117621-28466-fo208b.exsi3sor/package.tgz",
+  "_id": "linter-ui-default@1.6.3",
   "_inCache": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
+    "raw": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
-    "spec": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
+    "rawSpec": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
+    "spec": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
-  "_shasum": "2cd669df4bd1740382364347ea8f429401e9dcd0",
+  "_resolved": "file:../d-117621-28466-fo208b.exsi3sor/package.tgz",
+  "_shasum": "1aa958af941aff923c6d2dd66057c117d7aed3d6",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117526-5530-1ti0f5q.vq2i71fw29/package.tgz",
-  "_where": "/tmp/apm-install-dir-117526-5530-fg78rp.hlb9qc9pb9",
+  "_spec": "/tmp/d-117621-28466-fo208b.exsi3sor/package.tgz",
+  "_where": "/tmp/apm-install-dir-117621-28466-1fq7rbj.vdt12it3xr",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -228,13 +228,13 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.6.2",
+  "version": "1.6.3",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "asap",
-        "version": "2.0.5",
+        "version": "2.0.6",
         "path": "node_modules/asap/asap.js"
       },
       {
@@ -299,7 +299,7 @@
       },
       {
         "name": "js-tokens",
-        "version": "3.0.1",
+        "version": "3.0.2",
         "path": "node_modules/js-tokens/index.js"
       },
       {
@@ -409,7 +409,7 @@
       },
       {
         "name": "ua-parser-js",
-        "version": "0.7.13",
+        "version": "0.7.14",
         "path": "node_modules/ua-parser-js/src/ua-parser.js"
       },
       {
@@ -478,8 +478,8 @@
         "node_modules/strip-bom-buf/package.json",
         "node_modules/ua-parser-js/bower.json",
         "node_modules/ua-parser-js/package.json",
-        "node_modules/ua-parser-js/ua-parser-js.jquery.json",
         "node_modules/whatwg-fetch/package.json",
+        "package-lock.json",
         "package.json"
       ],
       ".js": [
