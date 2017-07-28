@@ -38,6 +38,7 @@
   linter: {}
   "linter-ui-default":
     panelHeight: 69
+    showPanel: true
   minimap: {}
   "tree-view": {}
   welcome:

@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
+        "raw": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
-        "spec": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
+        "rawSpec": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
+        "spec": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117621-28480-5ean8o.2r7ptoi529"
+      "/tmp/apm-install-dir-117627-12503-t4rl2v.iuj714i"
     ]
   ],
-  "_from": "../d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
-  "_id": "minimap@4.29.0",
+  "_from": "../d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
+  "_id": "minimap@4.29.3",
   "_inCache": true,
   "_location": "/minimap",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
+    "raw": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
-    "spec": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
+    "rawSpec": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
+    "spec": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
-  "_shasum": "a25b67982017d525505deb37c13fd317551648a9",
+  "_resolved": "file:../d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
+  "_shasum": "1f7380c869b6832e3f7da3ab2d4d373b5320e98e",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117621-28480-7oh0d7.p9uxytx1or/package.tgz",
-  "_where": "/tmp/apm-install-dir-117621-28480-5ean8o.2r7ptoi529",
+  "_spec": "/tmp/d-117627-12503-1lxqne1.oxbi1cerk9/package.tgz",
+  "_where": "/tmp/apm-install-dir-117627-12503-t4rl2v.iuj714i",
   "author": {
     "name": "Fangdun Cai",
     "email": "cfddream@gmail.com"
@@ -255,7 +255,7 @@
       "IntersectionObserver"
     ]
   },
-  "version": "4.29.0",
+  "version": "4.29.3",
   "viewProviders": [
     "minimapViewProvider"
   ],
